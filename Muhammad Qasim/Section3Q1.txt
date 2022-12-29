@@ -1,0 +1,13 @@
+Arrow function vs Normal function
+
+we can write Normal function by using the keyword function.
+But in arrow function we do not need any keyword. We just need to name it .
+
+Normal Function                     :          Arrow Function
+                                    :          
+function work()                     :          work = () =>
+{                                   :          {
+    Code here                       :           Code here
+}                                   :          }
+
+Arrow function lessen the code lines and reduced the effort of a programmer.

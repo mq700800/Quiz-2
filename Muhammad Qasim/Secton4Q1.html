@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Metrices</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    
+
+    
+    <script>
+function multiplyMatrices() {
+ 
+  let rowsA, colsA, rowsB, colsB;
+  do {
+    rowsA = prompt("Enter the number of rows for matrix A:");
+    colsA = prompt("Enter the number of columns for matrix A:");
+    rowsB = prompt("Enter the number of rows for matrix B:");
+    colsB = prompt("Enter the number of columns for matrix B:");
+    if (colsA !== rowsB) {
+      alert("Error: The column number of matrix A must be equal to the row number of matrix B for multiplication to be possible.");
+    }
+  } while (colsA !== rowsB);
+
+  
+  let matrixA = [];
+  for (let i = 0; i < rowsA; i++) {
+    matrixA[i] = [];
+    for (let j = 0; j < colsA; j++) {
+      matrixA[i][j] = prompt(`Enter value for matrix A at row ${i+1}, column ${j+1}:`);
+    }
+  }
+
+  let matrixB = [];
+  for (let i = 0; i < rowsB; i++) {
+    matrixB[i] = [];
+    for (let j = 0; j < colsB; j++) {
+      matrixB[i][j] = prompt(`Enter value for matrix B at row ${i+1}, column ${j+1}:`);
+    }
+  }
+
+ 
+  let matrixC = [];
+  for (let i = 0; i < rowsA; i++) {
+    matrixC[i] = [];
+    for (let j = 0; j < colsB; j++) {
+      matrixC[i][j] = 0;
+      for (let k = 0; k < colsA; k++) {
+        matrixC[i][j] += matrixA[i][k] * matrixB[k][j];
+      }
+    }
+  }
+
+
+  console.log("The result of multiplying matrix A and matrix B is:");
+  for (let i = 0; i < rowsA; i++) {
+    document.write(matrixC[i].join(" "));
+  }
+}
+multiplyMatrices();
+
+    </script>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

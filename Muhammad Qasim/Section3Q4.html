@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Age Calculator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <form action="" class="form-group">
+                    <label for="" >Enter day:</label>
+                    <input type="number" class="form-control" id="date" placeholder="1 to 30">
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <form action="" class="form-group">
+                    <label for="" >Enter month:</label>
+                    <input type="number" class="form-control" id="month" placeholder="1 to 12">
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <form action="" class="form-group">
+                    <label for="" >Enter year:</label>
+                    <input type="number" class="form-control" id="year" placeholder="e.g 1999">
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+               <button class="btn btn-primary" onclick="date()">Your Age </button>
+            </div>
+        </div>
+
+    </div>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-3">
+              <p id="res"></p>
+            </div>
+            <div class="col-3">
+                <p id="res1"></p>
+              </div>
+        </div>
+
+    </div>
+
+ <script>
+
+
+
+
+date =()=>{
+var date = Number(document.getElementById('date').value);
+var month = Number(document.getElementById('month').value);
+var year = Number(document.getElementById('year').value);
+var your_day,your_month,your_year ,m,d;
+your_day = 29-date;
+your_month = 12-month;
+your_year = 2022-year; 
+
+m = your_year * 12;
+d = your_year * 365;
+
+document.getElementById('res').innerHTML = `You are ${your_year} years ,${your_month} 
+months and ${your_day} days old. `;
+
+document.getElementById('res1').innerHTML = `You have lived ${your_year} years ,${m} 
+months and ${d} days in your life. `
+}
+
+ </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
